@@ -27,7 +27,7 @@ def mp3_download():
 	try:
 		YtO = YouTube(link)
 		audio = YtO.streams.filter(only_audio=True).first()
-		destionation = input('enter your destionation >>> ') or '.'  # C:\Users\giyyu\Music\mp3downloads
+		destionation = input('enter your destionation >>> ') or '.'
 		out_file = audio.download(output_path=destionation)
 
 
